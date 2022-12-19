@@ -145,8 +145,3 @@ done
 ***********************
 ***********************
 ***********************
-
-#Directory to iterate over with a * at the end
-# for example >>> FILES=/escratch4/zlewis/zlewis_Aug_01/2016_August_134614_MergedFastQs/CPX/* #Don't forget the *
-
-
