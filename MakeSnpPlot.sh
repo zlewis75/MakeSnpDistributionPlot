@@ -80,7 +80,7 @@ samtools index "$bam"
 	
 	#####New Call
 	ml picard/2.16.0-Java-1.8.0_144
-		java -jar /usr/local/apps/eb/picard/2.16.0-Java-1.8.0_144/picard.jar MarkDuplicates \
+		java -jar $EBROOTPICARD/picard.jar MarkDuplicates \
 			INPUT="$bam" \
 			OUTPUT="$flagged" \
 			METRICS_FILE="$metrics" \
@@ -94,7 +94,7 @@ samtools index "$bam"
 	
 	 #### New Call ##
 	ml picard/2.16.0-Java-1.8.0_144
-		java -jar /usr/local/apps/eb/picard/2.16.0-Java-1.8.0_144/picard.jar BuildBamIndex \
+		java -jar $EBROOTPICARD/picard.jar BuildBamIndex \
 	 		INPUT="$flagged" VALIDATION_STRINGENCY=LENIENT
 	 
 	 ######## OLD call #######java -Xmx2g -classpath "~/bin/GenomeAnalysisTK-3.5/" -jar ~/bin/GenomeAnalysisTK-3.5/GenomeAnalysisTK.jar -T HaplotypeCaller \
