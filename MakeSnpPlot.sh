@@ -25,6 +25,8 @@ FILES="${OUTDIR}/TrimmedReads/*R1_001_val_1\.fq\.gz" #Don't forget the *
 #
  mkdir "${OUTDIR}/SortedBamFiles"
  mkdir "${OUTDIR}/BigWigs"
+ mkdir "${OUTDIR}/MarkedDuplicateFiles"
+ mkdir "${OUTDIR}/VcfFiles"
 #mkdir "$OUTDIR/HomerTagDirectories"
 #mkdir "$OUTDIR/TdfFiles"
 #
