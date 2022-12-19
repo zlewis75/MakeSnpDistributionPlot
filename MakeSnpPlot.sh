@@ -108,8 +108,8 @@ samtools index "$bam"
 				
 	##### New Call########
 	 ml GATK/3.8-0-Java-1.8.0_144
-	
-		java -jar $EBROOTGATK/GenomeAnalysisTK.jar -T HaplotypeCaller \
+		
+		gatk -T HaplotypeCaller \
 	 			-R ~/Neurospora12/Nc12_RefSeq/GCA_000182925.2_NC12_genomic.fna \
 	 			-I "$flagged" \
 	 			-ploidy 10 \
@@ -130,8 +130,9 @@ samtools index "$bam"
 					
 	##### New Call########
 	 
-	 ml GATK/3.8-0-Java-1.8.0_144
-		java -jar $EBROOTGATK/GenomeAnalysisTK.jar -T VariantsToTable \
+	ml GATK/3.8-0-Java-1.8.0_144
+		
+		gatk -T VariantsToTable \
 	 			-R ~/Neurospora12/Nc12_RefSeq/GCA_000182925.2_NC12_genomic.fna \
 	 			-V "$vcf" \
 	 			-o "$table" \
